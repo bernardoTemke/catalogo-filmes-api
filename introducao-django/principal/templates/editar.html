@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Filme</title>
+</head>
+<body>
+    <h1>Editar Filme</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="titulo" value="{{ filme.titulo }}" required>
+        <input type="text" name="diretor" value="{{ filme.diretor }}" required>
+        <input type="number" name="ano" value="{{ filme.ano }}" required>
+        <button type="submit">Salvar alterações</button>
+    </form>
+
+    <a href="/">Voltar</a>
+</body>
+</html>
